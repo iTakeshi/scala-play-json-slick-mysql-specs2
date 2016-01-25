@@ -22,7 +22,7 @@ Very simple example application using:
 
 ### Test
 
-Before run the test suite, you must insert a dummy record to `country` table:
+Before running the test suite, you must insert a dummy record to `country` table:
 ```sql
 USE scala_play_sample;
 INSERT INTO country (id, name, capital) VALUES (1, "Japan", "Tokyo");
