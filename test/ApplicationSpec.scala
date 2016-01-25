@@ -8,12 +8,12 @@ import play.api.test.Helpers._
 @RunWith(classOf[JUnitRunner])
 class ApplicationSpec extends Specification {
   "Application" should {
-    "say hello to the world" in new WithApplication{
+    "return json array of countries" in new WithApplication{
       val home = route(FakeRequest(GET, "/")).get
 
       status(home) must equalTo(OK)
-      contentType(home) must beSome.which(_ == "text/plain")
-      contentAsString(home) must contain ("hello world!")
+      contentType(home) must beSome.which(_ == "application/json")
+      contentAsString(home) must contain ("Japan")
     }
   }
 }
